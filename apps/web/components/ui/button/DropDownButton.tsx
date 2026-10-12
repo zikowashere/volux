@@ -43,10 +43,10 @@ const DropDownButton = ({
   };
 
   return (
-    <div ref={ref} className="relative inline-block">
+    <div ref={ref} className="relative w-full">
       <button
         type="button"
-        className="flex w-48 items-center justify-between gap-2 rounded-lg border border-green-950 bg-white px-4 py-2"
+        className="flex w-full items-center justify-between gap-2 rounded-lg border border-green-950 bg-white px-4 py-2"
         onClick={() => setIsOpen(!isOpen)}
         aria-haspopup="listbox"
         aria-expanded={isOpen}

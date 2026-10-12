@@ -1,0 +1,16 @@
+{
+  "name": "volux",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "dev:api": "turbo run dev --filter=@volux/api",
+    "dev:web": "turbo run dev --filter=@volux/web"
+  },
+  "devDependencies": {
+    "turbo": "^2"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

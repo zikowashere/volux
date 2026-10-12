@@ -1,12 +1,12 @@
 import React from "react";
 
 type StepperProps = {
-  steps: string[];
+  steps: { step: number; text: string }[];
   currentStep: number;
 };
 const Stepper = ({ steps, currentStep }: StepperProps) => {
   return (
-    <div className="flex items-center">
+    <div className="hidden lg:flex lg:items-center lg:p-2">
       {steps.map((step, index) => (
         <React.Fragment key={index}>
           <div
@@ -20,9 +20,13 @@ const Stepper = ({ steps, currentStep }: StepperProps) => {
           >
             {index + 1}
           </div>
-          {index < steps.length - 1 && (
-            <div className="flex-1 h-1 bg-gray-300 mx-2"></div>
-          )}
+
+          <>
+            <p className="text-black text-lg ">{step.text}</p>
+            {index < steps.length - 1 && (
+              <div className="flex-1 h-1 bg-gray-300 mx-2"></div>
+            )}
+          </>
         </React.Fragment>
       ))}
     </div>
